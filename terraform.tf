@@ -24,6 +24,7 @@ terraform {
     storage_account_name = "stppolzdterraformbackend"
     container_name = "ghlztfstate"
     key = "terraform.tfstate"
+    use_oidc = true
   }
 }
 
