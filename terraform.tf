@@ -25,8 +25,8 @@ terraform {
     container_name = "ghlztfstate"
     key = "terraform.tfstate"
     use_oidc = true
-    subscription_id = var.subscription_id
-    tenant_id = var.tenant_id
+    subscription_id = "323635f4-82ae-4b1a-a0fe-6a7d6f021834"
+    tenant_id = "83bc0644-f514-4a80-9507-efdef8c44c28"
   }
 }
 
