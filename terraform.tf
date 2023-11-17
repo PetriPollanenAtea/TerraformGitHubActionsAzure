@@ -19,6 +19,12 @@ terraform {
       version = "=3.4.3"
     }
   }
+  backend "azurerm" {
+    resource_group_name = "rg-terraformbackend"
+    storage_account_name = "stppolzdterraformbackend"
+    container_name = "ghlztfstate"
+    key = "terraform.tfstate"
+  }
 }
 
 provider "azurerm" {
