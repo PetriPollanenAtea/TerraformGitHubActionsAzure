@@ -73,6 +73,8 @@ jobs:
         tenant-id: ${{ secrets.AZURE_TENANT_ID }}
         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
+    - run: echo "Deploying to production server on branch $GITHUB_REF"
+
     # - name: 'Run az commands'
     #   run : |
     #     az account show

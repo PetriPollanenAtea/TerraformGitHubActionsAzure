@@ -1,5 +1,5 @@
 location = "westeurope"
-resource_group_name = "rg-pp-test"
+resource_group_name = "rg-pp-gh-test"
 
 vnet_name = "vnet_hub_we"
 vnet_address_space = [ "10.1.0.0/16" ]
