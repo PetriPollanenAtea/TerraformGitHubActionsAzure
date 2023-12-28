@@ -19,15 +19,15 @@ module "network" {
   subnets             = var.subnets
 }
 
-# module "lvm" {
-#   source = "github.com/PetriPollanenAtea/modules/linuxvm"
-#   depends_on = [module.network.virtual_network_id]
-#
-#   location            = var.location
-#   resource_group_name = var.monitoring_test_resource_group_name
-#   vnet_id             = module.network.virtual_network_id
-#   lvms                = var.lvms
-#   lvm_size            = var.lvm_size
-#   lvm_admin_username  = var.lvm_admin_username
-#   nic_subnets         = module.network.subnet_ids
-# }
+module "lvm" {
+  source = "github.com/PetriPollanenAtea/modules/linuxvm/v1.2.0"
+  depends_on = [module.network.virtual_network_id]
+
+  location            = var.location
+  resource_group_name = var.monitoring_test_resource_group_name
+  vnet_id             = module.network.virtual_network_id
+  lvms                = var.lvms
+  lvm_size            = var.lvm_size
+  lvm_admin_username  = var.lvm_admin_username
+  nic_subnets         = module.network.subnet_ids
+}
