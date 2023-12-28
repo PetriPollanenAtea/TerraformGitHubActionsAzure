@@ -23,11 +23,15 @@ module "lvm" {
   source = "github.com/PetriPollanenAtea/modules/linuxvm/v1.0.0"
   depends_on = [module.network.virtual_network_id]
 
-  location            = var.location
-  resource_group_name = var.monitoring_test_resource_group_name
-  vnet_id             = module.network.virtual_network_id
-  lvms                = var.lvms
-  lvm_size            = var.lvm_size
-  lvm_admin_username  = var.lvm_admin_username
-  nic_subnets         = module.network.subnet_ids
+  location                = var.location
+  resource_group_name     = var.monitoring_test_resource_group_name
+  vnet_id                 = module.network.virtual_network_id
+  lvms                    = var.lvms
+  lvm_size                = var.lvm_size
+  lvm_admin_username      = var.lvm_admin_username
+  nic_subnets             = module.network.subnet_ids
+  source_image_publisher  = var.lvm_source_image_publisher
+  source_image_offer      = var.lvm_source_image_offer
+  source_image_sku        = var.lvm_source_image_sku
+  source_image_version    = var.lvm_source_image_version
 }

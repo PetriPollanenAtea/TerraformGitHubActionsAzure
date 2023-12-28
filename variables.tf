@@ -44,3 +44,19 @@ variable "lvm_size" {
 variable "lvm_admin_username" {
   type = string
 }
+
+variable "lvm_source_image_publisher" {
+  type = string
+}
+
+variable "lvm_source_image_offer" {
+  type = string
+}
+
+variable "lvm_source_image_sku" {
+  type = string
+}
+
+variable "lvm_source_image_version" {
+  type = string
+}
