@@ -5,7 +5,7 @@ resource "azurerm_resource_group" "rg_networking_we" {
 
 resource "azurerm_resource_group" "rg_monitoring_test" {
   location = var.location
-  name = var_monitoring_test_resource_group_name
+  name = var.monitoring_test_resource_group_name
 }
 
 module "network" {
