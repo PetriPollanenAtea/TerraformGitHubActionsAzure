@@ -10,7 +10,7 @@ resource "azurerm_resource_group" "rg_monitoring_test" {
 
 module "network" {
   source = "github.com/PetriPollanenAtea/modules/network"
-  depends_on = [ azurerm_resource_group.rg_networking ]
+  depends_on = [ azurerm_resource_group.rg_networking_we ]
 
   location            = var.location
   resource_group_name = var.networking_resource_group_name
