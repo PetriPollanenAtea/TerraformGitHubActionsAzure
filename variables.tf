@@ -3,8 +3,13 @@ variable "location" {
   type = string
 }
 
-variable "resource_group_name" {
-  description = "Resource Group name"
+variable "networking_resource_group_name" {
+  description = "Networking Resource Group name"
+  type = string
+}
+
+variable "monitoring_test_resource_group_name" {
+  description = "Monitoring Test Resource Group name"
   type = string
 }
 
