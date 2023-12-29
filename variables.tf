@@ -34,6 +34,7 @@ variable "lvms" {
     subnet_id = number
     subnet_name = string
     nic = string
+    pip_enable = bool
     source_image_publisher = string
     source_image_offer = string
     source_image_sku = string
