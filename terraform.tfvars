@@ -32,8 +32,8 @@ lvms = {
     nic = "lvm2"
     pip_enable = false
     source_image_publisher = "Canonical"
-    source_image_offer = "UbuntuServer"
-    source_image_sku = "18.04-LTS"
+    source_image_offer = "0001-com-ubuntu-server-jammy"
+    source_image_sku = "22_04-lts-gen2"
     source_image_version = "latest"
   }
 }
