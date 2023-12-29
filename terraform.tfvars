@@ -12,10 +12,6 @@ subnets = {
 
 lvm_size = "Standard_B1s"
 lvm_admin_username = "optimusprime"
-lvm_source_image_publisher = "Canonical"
-lvm_source_image_offer = "UbuntuServer"
-lvm_source_image_sku = "18.04-LTS"
-lvm_source_image_version = "latest"
 
 lvms = {
   lvm1 = {
@@ -23,11 +19,19 @@ lvms = {
     subnet_id = 0
     subnet_name = "web1"
     nic = "lvm1"
+    source_image_publisher = "Canonical"
+    source_image_offer = "UbuntuServer"
+    source_image_sku = "18.04-LTS"
+    source_image_version = "latest"
   }
   lvm2 = {
     name = "lvm2"
     subnet_id = 0
     subnet_name = "web1"
     nic = "lvm2"
+    source_image_publisher = "Canonical"
+    source_image_offer = "UbuntuServer"
+    source_image_sku = "18.04-LTS"
+    source_image_version = "latest"
   }
 }

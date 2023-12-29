@@ -20,7 +20,7 @@ module "network" {
 }
 
 module "lvm" {
-  source = "github.com/PetriPollanenAtea/modules/linuxvm/v1.1.0"
+  source = "github.com/PetriPollanenAtea/modules/linuxvm/v1.2.0"
   depends_on = [module.network.virtual_network_id]
 
   location                = var.location
