@@ -53,11 +53,15 @@ wvms = {
     subnet_id = 0
     subnet_name = "web1"
     nic = "wvm1"
+    pip_enable = true
+    auto_shutdown_enable = true
+    auto_shutdown_time = "1700"
+    auto_shutdown_timezone = "FLE Standard Time"
+    source_image_publisher = "MicrosoftWindowsServer"
+    source_image_offer = "WindowsServer"
+    source_image_sku = "2022-Datacenter"
+    source_image_version = "latest"
   }
 }
 
-source_image_publisher = "MicrosoftWindowsServer"
-source_image_offer = "WindowsServer"
-source_image_sku = "2022-Datacenter"
-source_image_version = "latest"
 

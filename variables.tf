@@ -60,6 +60,14 @@ variable "wvms" {
     subnet_id = number
     subnet_name = string
     nic = string
+    pip_enable = bool
+    auto_shutdown_enable = bool
+    auto_shutdown_time = string
+    auto_shutdown_timezone = string
+    source_image_publisher = string
+    source_image_offer = string
+    source_image_sku = string
+    source_image_version = string
   }))
 }
 
@@ -68,21 +76,5 @@ variable "wvm_size" {
 }
 
 variable "wvm_admin_username" {
-  type = string
-}
-
-variable "source_image_publisher" {
-  type = string
-}
-
-variable "source_image_offer" {
-  type = string
-}
-
-variable "source_image_sku" {
-  type = string
-}
-
-variable "source_image_version" {
   type = string
 }

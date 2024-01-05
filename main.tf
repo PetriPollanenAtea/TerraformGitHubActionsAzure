@@ -33,7 +33,7 @@ module "lvm" {
 }
 
 module "wvm" {
-  source = "github.com/PetriPollanenAtea/modules/windowsvm/v1.1.0"
+  source = "github.com/PetriPollanenAtea/modules/windowsvm/v1.2.0"
   depends_on = [module.network.virtual_network_id]
 
   location                = var.location
@@ -43,8 +43,4 @@ module "wvm" {
   wvm_size                = var.wvm_size
   wvm_admin_username      = var.wvm_admin_username
   nic_subnets             = module.network.subnet_ids
-  source_image_publisher  = var.source_image_publisher
-  source_image_offer      = var.source_image_offer
-  source_image_sku        = var.source_image_sku
-  source_image_version    = var.source_image_version
 }
