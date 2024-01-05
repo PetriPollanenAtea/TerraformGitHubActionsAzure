@@ -52,3 +52,21 @@ variable "lvm_size" {
 variable "lvm_admin_username" {
   type = string
 }
+
+variable "wvms" {
+  description = "(Required) Map of Windows virtual machines"
+  type = map(object({
+    name = string
+    subnet_id = number
+    subnet_name = string
+    nic = string
+  }))
+}
+
+variable "wvm_size" {
+  type = string
+}
+
+variable "wvm_admin_username" {
+  type = string
+}

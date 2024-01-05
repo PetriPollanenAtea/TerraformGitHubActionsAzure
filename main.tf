@@ -31,3 +31,16 @@ module "lvm" {
   lvm_admin_username      = var.lvm_admin_username
   nic_subnets             = module.network.subnet_ids
 }
+
+module "wvm" {
+  source = "github.com/PetriPollanenAtea/modules/windowsvm/v1.0.0"
+  depends_on = [module.network.virtual_network_id]
+
+  location                = var.location
+  resource_group_name     = var.monitoring_test_resource_group_name
+  vnet_id                 = module.network.virtual_network_id
+  wvms                    = var.wvms
+  wvm_size                = var.wvm_size
+  wvm_admin_username      = var.wvm_admin_username
+  nic_subnets             = module.network.subnet_ids
+}

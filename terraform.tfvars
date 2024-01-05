@@ -43,3 +43,15 @@ lvms = {
     source_image_version = "latest"
   }
 }
+
+wvm_size = "Standard_B2ms"
+wvm_admin_username = "optimusprime"
+
+wvms = {
+  wvm1 = {
+    name = "wvm1"
+    subnet_id = 0
+    subnet_name = "web1"
+    nic = "wvm1"
+  }
+}
