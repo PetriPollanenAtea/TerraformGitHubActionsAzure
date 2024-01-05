@@ -70,3 +70,19 @@ variable "wvm_size" {
 variable "wvm_admin_username" {
   type = string
 }
+
+variable "source_image_publisher" {
+  type = string
+}
+
+variable "source_image_offer" {
+  type = string
+}
+
+variable "source_image_sku" {
+  type = string
+}
+
+variable "source_image_version" {
+  type = string
+}

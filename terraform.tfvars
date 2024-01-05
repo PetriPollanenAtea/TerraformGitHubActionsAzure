@@ -55,3 +55,9 @@ wvms = {
     nic = "wvm1"
   }
 }
+
+source_image_publisher = "MicrosoftWindowsServer"
+source_image_offer = "WindowsServer"
+source_image_sku = "2022-Datacenter"
+source_image_version = "latest"
+

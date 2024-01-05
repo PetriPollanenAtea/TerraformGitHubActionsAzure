@@ -33,7 +33,7 @@ module "lvm" {
 }
 
 module "wvm" {
-  source = "github.com/PetriPollanenAtea/modules/windowsvm/v1.0.0"
+  source = "github.com/PetriPollanenAtea/modules/windowsvm/v1.1.0"
   depends_on = [module.network.virtual_network_id]
 
   location                = var.location
