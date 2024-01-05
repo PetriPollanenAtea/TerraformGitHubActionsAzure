@@ -82,3 +82,8 @@ variable "wvm_admin_username" {
 variable "nsg_name" {
   type = string
 }
+
+variable "nsg_subnets" {
+  description = "Subnets to attach NSG"
+  type = list(string)
+}
