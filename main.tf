@@ -44,3 +44,12 @@ module "wvm" {
   wvm_admin_username      = var.wvm_admin_username
   nic_subnets             = module.network.subnet_ids
 }
+
+module "nsg" {
+  source = "github.com/PetriPollanenAtea/modules/nsg/v1.0.0"
+  depends_on = [module.network.virtual_network_id]
+
+  location                = var.location
+  resource_group_name     = var.monitoring_test_resource_group_name
+  nsg_name                = var.nsg_name
+}

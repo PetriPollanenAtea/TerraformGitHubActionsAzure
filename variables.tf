@@ -78,3 +78,7 @@ variable "wvm_size" {
 variable "wvm_admin_username" {
   type = string
 }
+
+variable "nsg_name" {
+  type = string
+}

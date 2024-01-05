@@ -64,4 +64,5 @@ wvms = {
   }
 }
 
+nsg_name = "nsg-default"
 
