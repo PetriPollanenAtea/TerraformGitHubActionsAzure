@@ -43,4 +43,8 @@ module "wvm" {
   wvm_size                = var.wvm_size
   wvm_admin_username      = var.wvm_admin_username
   nic_subnets             = module.network.subnet_ids
+  source_image_publisher  = var.source_image_publisher
+  source_image_offer      = var.source_image_offer
+  source_image_sku        = var.source_image_sku
+  source_image_version    = var.source_image_version
 }
