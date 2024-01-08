@@ -53,5 +53,6 @@ module "nsg" {
   resource_group_name     = var.monitoring_test_resource_group_name
   nsg_name                = var.nsg_name
   vnet_id                 = module.network.virtual_network_id
+  nsg_rules               = var.nsg_rules
   nsg_subnets             = var.nsg_subnets
 }
