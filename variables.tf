@@ -85,5 +85,5 @@ variable "nsg_name" {
 
 variable "nsg_subnets" {
   description = "Subnets to attach NSG"
-  type = list(string)
+  type = set(string)
 }

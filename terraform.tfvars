@@ -67,3 +67,4 @@ wvms = {
 nsg_name = "nsg-default"
 nsg_subnets = [ "web1" ]
 
+
