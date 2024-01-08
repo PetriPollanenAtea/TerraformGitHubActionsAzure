@@ -19,6 +19,19 @@ module "network" {
   subnets             = var.subnets
 }
 
+module "nsg" {
+  source = "github.com/PetriPollanenAtea/modules/nsg/v1.0.0"
+  depends_on = [module.network.virtual_network_id]
+
+  location                = var.location
+  resource_group_name     = var.monitoring_test_resource_group_name
+  nsg_name                = var.nsg_name
+  vnet_id                 = module.network.virtual_network_id
+  nsg_rules               = var.nsg_rules
+  nsg_subnets             = var.nsg_subnets
+}
+
+/*
 module "lvm" {
   source = "github.com/PetriPollanenAtea/modules/linuxvm/v1.2.0"
   depends_on = [module.network.virtual_network_id]
@@ -31,7 +44,8 @@ module "lvm" {
   lvm_admin_username      = var.lvm_admin_username
   nic_subnets             = module.network.subnet_ids
 }
-
+*/
+/*
 module "wvm" {
   source = "github.com/PetriPollanenAtea/modules/windowsvm/v1.2.0"
   depends_on = [module.network.virtual_network_id]
@@ -44,15 +58,4 @@ module "wvm" {
   wvm_admin_username      = var.wvm_admin_username
   nic_subnets             = module.network.subnet_ids
 }
-
-module "nsg" {
-  source = "github.com/PetriPollanenAtea/modules/nsg/v1.0.0"
-  depends_on = [module.network.virtual_network_id]
-
-  location                = var.location
-  resource_group_name     = var.monitoring_test_resource_group_name
-  nsg_name                = var.nsg_name
-  vnet_id                 = module.network.virtual_network_id
-  nsg_rules               = var.nsg_rules
-  nsg_subnets             = var.nsg_subnets
-}
+*/
