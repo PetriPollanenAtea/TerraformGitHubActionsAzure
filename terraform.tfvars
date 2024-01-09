@@ -72,7 +72,7 @@ nsg_subnets = [
 
 nsg_rules = {
   inbound_allow_rdp = {
-    name                       = "allow_RDP"
+    name                       = "inbound_allow_RDP"
     priority                   = 100
     direction                  = "Inbound"
     access                     = "Allow"
@@ -83,7 +83,7 @@ nsg_rules = {
     destination_address_prefix = "*"
   }
   inbound_allow_ssh = {
-    name                       = "allow_SSH"
+    name                       = "inbound_allow_SSH"
     priority                   = 101
     direction                  = "Inbound"
     access                     = "Allow"
@@ -105,7 +105,7 @@ nsg_rules = {
     destination_address_prefix = "*"
   }
   outbound_block_all = {
-    name                       = "block_all"
+    name                       = "outbound_block_all"
     priority                   = 4096
     direction                  = "Outbound"
     access                     = "Deny"
