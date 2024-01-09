@@ -1,5 +1,6 @@
 location = "westeurope"
 networking_resource_group_name = "rg-networking"
+/*
 monitoring_test_resource_group_name = "rg-monitoring-test"
 
 vnet_name = "vnet_hub_we"
@@ -116,4 +117,4 @@ nsg_rules = {
     destination_address_prefix = "*"
   }
 }
-
+*/
