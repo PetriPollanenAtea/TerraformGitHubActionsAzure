@@ -93,5 +93,16 @@ nsg_rules = {
     source_address_prefix      = "83.146.176.121/32"
     destination_address_prefix = "*"
   }
+  block_all = {
+    name                       = "block_all"
+    priority                   = 4096
+    direction                  = "Inbound"
+    access                     = "Deny"
+    protocol                   = "*"
+    source_port_range          = "*"
+    destination_port_range     = "*"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
 }
 
