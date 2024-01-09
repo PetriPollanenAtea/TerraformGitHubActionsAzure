@@ -94,7 +94,7 @@ nsg_rules = {
     destination_address_prefix = "*"
   }
   inbound_block_all = {
-    name                       = "block_all"
+    name                       = "inbound_block_all"
     priority                   = 4096
     direction                  = "Inbound"
     access                     = "Deny"
