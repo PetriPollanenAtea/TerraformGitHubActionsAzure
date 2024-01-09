@@ -1,8 +1,8 @@
 location = "westeurope"
 networking_resource_group_name = "rg-networking"
-/*
 monitoring_test_resource_group_name = "rg-monitoring-test"
 
+/*
 vnet_name = "vnet_hub_we"
 vnet_address_space = [ "10.1.0.0/16" ]
 subnets = {
