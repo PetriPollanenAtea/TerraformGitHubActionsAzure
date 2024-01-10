@@ -125,7 +125,7 @@ variable "loganalytics_retention" {
 }
 
 variable "dces" {
-   description = "Azure Monitor Data Collection Endpoints"
+  description = "Azure Monitor Data Collection Endpoints"
   type = map(object({
     name = string
     kind = string

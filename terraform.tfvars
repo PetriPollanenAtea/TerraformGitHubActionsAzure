@@ -123,3 +123,10 @@ nsg_rules = {
 loganalytics_name = "log-monitoring"
 loganalytics_sku = "PerGB2018"
 loganalytics_retention = 30
+
+dces = {
+  dce1 = {
+    name = "dce1"
+    kind = "Linux"
+  }
+}
