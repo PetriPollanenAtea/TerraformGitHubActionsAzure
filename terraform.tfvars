@@ -118,6 +118,6 @@ nsg_rules = {
   }
 }
 
-loganalytics_name = "log_monitoring"
+loganalytics_name = "log-monitoring"
 loganalytics_sku = "PerGB2018"
 loganalytics_retention = 30
