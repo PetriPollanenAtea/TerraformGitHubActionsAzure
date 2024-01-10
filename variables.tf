@@ -40,6 +40,7 @@ variable "lvms" {
     subnet_name = string
     nic = string
     pip_enable = bool
+    ama_enable = bool
     auto_shutdown_enable = bool
     auto_shutdown_time = string
     auto_shutdown_timezone = string
