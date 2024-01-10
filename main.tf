@@ -13,6 +13,7 @@ resource "azurerm_resource_group" "rg_monitoring_test" {
   location = var.location
   name = var.monitoring_test_resource_group_name
 }
+*/
 
 module "network" {
   source = "github.com/PetriPollanenAtea/modules/network"
@@ -25,6 +26,7 @@ module "network" {
   subnets             = var.subnets
 }
 
+/*
 module "nsg" {
   source = "github.com/PetriPollanenAtea/modules/nsg/v1.0.0"
   depends_on = [module.network.virtual_network_id]
