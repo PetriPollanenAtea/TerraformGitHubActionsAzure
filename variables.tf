@@ -123,3 +123,11 @@ variable "loganalytics_retention" {
   description = "Log Analytics Workspace retention time in days"
   type = number
 }
+
+variable "dces" {
+   description = "Azure Monitor Data Collection Endpoints"
+  type = map(object({
+    name = string
+    kind = string
+  }))
+}

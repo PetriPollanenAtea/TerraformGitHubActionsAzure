@@ -74,4 +74,5 @@ module "loganalytics" {
   name = var.loganalytics_name
   sku = var.loganalytics_sku
   retention = var.loganalytics_retention
+  dces = var.dces
 }
