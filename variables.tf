@@ -8,6 +8,11 @@ variable "networking_resource_group_name" {
   type = string
 }
 
+variable "loganalytics_resource_group_name" {
+  description = "Log Analytics Workspace Resouce Group name"
+  type = string
+}
+
 variable "monitoring_test_resource_group_name" {
   description = "Monitoring Test Resource Group name"
   type = string
@@ -101,4 +106,19 @@ variable "nsg_rules" {
     source_address_prefix = string
     destination_address_prefix = string
   }))
+}
+
+variable "loganalytics_name" {
+  description = "Log Analytics Workspace name"
+  type = string
+}
+
+variable "loganalytics_sku" {
+  description = "Log Analytics Workspace SKU"
+  type = string
+}
+
+variable "loganalytics_retention" {
+  description = "Log Analytics Workspace retention time in days"
+  type = number
 }

@@ -1,6 +1,7 @@
 location = "westeurope"
 networking_resource_group_name = "rg-networking"
 monitoring_test_resource_group_name = "rg-monitoring-test"
+loganalytics_resource_group_name = "rg-monitoring"
 
 vnet_name = "vnet_hub_we"
 vnet_address_space = [ "10.1.0.0/16" ]
@@ -116,3 +117,7 @@ nsg_rules = {
     destination_address_prefix = "*"
   }
 }
+
+loganalytics_name = "log_monitoring"
+loganalytics_sku = "PerGB2018"
+loganalytics_retention = 30

@@ -3,6 +3,11 @@ resource "azurerm_resource_group" "rg_networking_we" {
   name = var.networking_resource_group_name
 }
 
+resource "azurerm_resource_group" "rg_loganalytics_we" {
+  location = var.location
+  name = var.loganalytics_resource_group_name
+}
+
 /*
 resource "azurerm_resource_group" "rg_monitoring_test" {
   location = var.location
@@ -59,3 +64,14 @@ module "wvm" {
   nic_subnets             = module.network.subnet_ids
 }
 */
+
+module "loganalytics" {
+  source = "github.com/PetriPollanenAtea/modules/loganalytics/v1.0.0"
+  depends_on = [ azurerm_resource_group.rg_loganalytics_we ]
+
+  location = var.location
+  resource_group_name = var.loganalytics_resource_group_name
+  name = var.loganalytics_name
+  sku = var.loganalytics_sku
+  retention = var.loganalytics_retention
+}
